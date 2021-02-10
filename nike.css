@@ -1,0 +1,113 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  margin:0;
+  background: silver;
+  font-family: sans-serif;
+  /* משנה את העברית לשמאל */
+  direction: rtl;
+}
+
+.container-fluid{
+  width:100%;
+}
+
+.container{
+/* במציאות הרוחב יהיה בין 960 ל 1160 פיקסלים */
+  max-width:1000px;
+  margin:0 auto;
+}
+
+header{
+  /* min-height: 48px; */
+  background-image: url(_images_nike/nike_01.jpg);
+}
+
+header .row{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 48px;
+  /* border:2px solid black; */
+}
+
+header .logo{
+  height: 48px;
+  border-right:1px solid silver;
+  width:100px;
+  text-align: center;
+}
+
+header nav a{
+  color:grey;
+  padding: 0 12px;
+  text-decoration: none;
+  border-left:1px solid silver;
+  height: 48px;
+  /* כדי לתת נפח לתגית שהיא אינליין בברירת מחדל שלה
+  חייבים לשנות לה את סוג הדיספליי , העניין שאם אני אכתוב
+  רק פלקס הם יהפכו להיות אחד מתחת לשני, לכן יש מאפיין
+  שנקרא פלקס איןליין שגם מאפשר נפח לתגית
+  וגם שעדיין תתנהג מול האחיות שלה כאין ליין */
+  display: inline-flex;
+  align-items: center;
+}
+
+/* כדי למחוק את הבורדר בלינק האחרון */
+header nav a:last-of-type{
+  border:0 solid;
+}
+
+header nav a:hover{
+  color:orange;
+}
+
+.strip{
+  min-height: 400px;
+  background-image: url(_images_nike/nike_02.jpg);
+  /* אומר לרקע להמתח על כל הדיב */
+  background-size: cover;
+  background-position: center top;
+}
+
+main{
+  min-height: 150px;
+  background: white;
+  padding:8px 0;
+  text-align: center;
+}
+
+main .row{
+  display: flex;
+  justify-content: space-between;
+}
+
+main .box{
+  width:24%;
+  border:1px solid black;
+  padding-bottom: 24px;
+}
+
+main .box img{
+  width:100%;
+}
+
+main .box h3, main .box p{
+  padding:0 8px;
+} 
+
+main .line_img{
+  width:100%;
+}
+
+footer{
+  min-height: 50px;
+  background: black;
+  color:white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
